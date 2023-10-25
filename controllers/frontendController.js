@@ -1,4 +1,4 @@
-import { getFrontend, createFrontend } from "../models/frontendModel.js";
+import { getFrontend, createFrontend, deleteFrontendById } from "../models/frontendModel.js";
 
 //HTTP handler for get all
 export async function getFrontendList(req, res) {
@@ -21,3 +21,18 @@ export async function postFrontend(req, res) {
   res.status(201).json({ status: "success", data: newDFrontendData });
 };
 
+//Endpoint to delete item by id
+export async function deleteFrontend(req, res) {
+  //store in a variable your req.params.id
+  const id = req.params.id;
+  //store in a variable the await promise
+  const deleteItem = await deleteFrontendById(id);
+  //404 error if item not found
+  if (!deleteItem) {
+    return res
+      .status(404)
+      .json({ status: "fail", data: "Data item not found by Id." });
+  }
+  //return success status
+  res.status(200).json({ status: "success", data: deleteItem });
+};

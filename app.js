@@ -1,6 +1,6 @@
 import express, { response } from "express";
 import morgan from "morgan";
-import { getFrontendList, postFrontend } from "./controllers/frontendController.js";
+import { getFrontendList, postFrontend, deleteFrontend, } from "./controllers/frontendController.js";
 
 const app = express();
 
@@ -14,7 +14,7 @@ app.get("/", (req, res) => {
 
 app.get("/frontend", getFrontendList);
 app.post("/frontend", postFrontend)
-
+app.delete("/frontend/:id", deleteFrontend);
 
 const PORT = 7000;
 

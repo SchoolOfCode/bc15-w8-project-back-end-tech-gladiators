@@ -26,3 +26,14 @@ export async function createFrontend(frontend) {
       //return result
   return result.rows[0] || null
 }
+
+export async function deleteFrontendById(id) {
+  // Delete item by id
+  const deleteFrontendQuery = 'DELETE FROM frontend WHERE id = $1 RETURNING *';
+  const result = await pool.query(deleteFrontendQuery, [id]);
+  // Return the deleted item or null
+  if (result.rowCount === 0) {
+    return null;
+  }
+  return result.rows[0];
+}
