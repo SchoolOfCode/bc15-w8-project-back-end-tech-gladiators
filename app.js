@@ -13,6 +13,7 @@ app.use(cors())
 
 app.use("/frontend", frontendRoute);
 app.use("/backend", backendRoute);
+app.use("funstuff", funstuffRoute)
 
 // app.get("/", (req, res) => {
 //   console.log("Hello")
