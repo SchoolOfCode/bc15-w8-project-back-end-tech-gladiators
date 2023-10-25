@@ -5,9 +5,10 @@ async function resetDatabase() {
     // Drop existing tables if they exist
     await pool.query(`
       DROP TABLE IF EXISTS frontend CASCADE;
+      DROP TABLE IF EXISTS backend CASCADE;
     `);
 
-    // Create the authors table
+    // Create the frontend table
     await pool.query(`
       CREATE TABLE frontend (
         id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
@@ -17,7 +18,17 @@ async function resetDatabase() {
       );
     `);
 
-    // Seed the authors table
+    // Create the backend table
+    await pool.query(`
+      CREATE TABLE backend (
+        id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+        title VARCHAR(255) NOT NULL,
+        description VARCHAR(255) NOT NULL,
+        link VARCHAR(255) NOT NULL
+      );
+    `);
+
+    // Seed the frontend table
     await pool.query(`
       INSERT INTO frontend (title, description, link)
       VALUES
@@ -27,6 +38,17 @@ async function resetDatabase() {
         ('Hello', 'Martina', 'Hello'),
         ('Hello', 'Martina', 'Hello')
     `);
+
+    // Seed the backend table
+    await pool.query(`
+        INSERT INTO backend (title, description, link)
+        VALUES
+          ('Hello', 'Martina', 'Hello'),
+          ('Hello', 'Martina', 'Hello'),
+          ('Hello', 'Martina', 'Hello'),
+          ('Hello', 'Martina', 'Hello'),
+          ('Hello', 'Martina', 'Hello')
+      `);
 
     console.log("Database reset successful");
   } catch (error) {
@@ -38,4 +60,3 @@ async function resetDatabase() {
 }
 
 await resetDatabase();
-
