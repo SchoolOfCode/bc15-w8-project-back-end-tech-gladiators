@@ -12,14 +12,14 @@ async function resetDatabase() {
       CREATE TABLE frontend (
         id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
         title VARCHAR(255) NOT NULL,
-        link VARCHAR(255) NOT NULL,
-        author VARCHAR(255) NOT NULL
+        description VARCHAR(255) NOT NULL,
+        link VARCHAR(255) NOT NULL
       );
     `);
 
     // Seed the authors table
     await pool.query(`
-      INSERT INTO frontend (title, link, author)
+      INSERT INTO frontend (title, description, link)
       VALUES
         ('Hello', 'Martina', 'Hello'),
         ('Hello', 'Martina', 'Hello'),
