@@ -5,7 +5,7 @@ import {
 } from "../models/backendModel.js";
 
 //HTTP handler for get all
-export async function getBrontendList(req, res) {
+export async function getBackendList(req, res) {
   const backendData = await getBackend();
   res.status(200).send({ status: "success", data: backendData });
   console.log(backendData);
@@ -13,7 +13,7 @@ export async function getBrontendList(req, res) {
 
 //HTTP handler route for POST
 
-export async function postFrontend(req, res) {
+export async function postBackend(req, res) {
   //store in a variable the req.body
   const newData = req.body;
   //store in a variable the await promise
