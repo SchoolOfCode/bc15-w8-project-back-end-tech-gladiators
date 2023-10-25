@@ -34,8 +34,8 @@ async function resetDatabase() {
       );
     `);
 
-        // Create the funstuff table
-        await pool.query(`
+    // Create the funstuff table
+    await pool.query(`
         CREATE TABLE funstuff (
           id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
           title VARCHAR(255) NOT NULL,
@@ -46,7 +46,7 @@ async function resetDatabase() {
         );
       `);
 
-          // Create the uxdesign table
+    // Create the uxdesign table
     await pool.query(`
     CREATE TABLE uxdesign (
       id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
@@ -70,7 +70,9 @@ async function resetDatabase() {
         ('JavaScript', 'How To Make Your Own JavaScript Events', 'https://youtu.be/DzZXRvk3EGg?si=o4qMo9wxiKa2klhT', 'Image', 'Martina'),
         ('JavaScript', 'Learn Pointer Events In 15 Minutes', 'https://youtu.be/MhUCYR9Tb9c?si=7PCDEysTHWK7an_B', 'Image', 'Martina'),
         ('JavaScript', 'Learn JavaScript DOM Traversal In 15 Minutes', 'https://youtu.be/v7rSSy8CaYE?si=1ycToe-WB5UeBhMF', 'Image', 'Martina'),
-        ('HTMl & CSS', 'Learn HTML5 and CSS3 For Beginners - Crash Course', 'https://youtu.be/vQWlgd7hV4A?si=S8B_1W-DEwlww5lX', 'Image', 'Martina')
+        ('HTMl & CSS', 'Learn HTML5 and CSS3 For Beginners - Crash Course', 'https://youtu.be/vQWlgd7hV4A?si=S8B_1W-DEwlww5lX', 'Image', 'Martina'),
+        ('Hello', 'Martina', 'Hello', 'Image', 'Martina'),
+        ('Hello', 'Martina', 'Hello', 'Image', 'Martina')
     `);
 
     // Seed the backend table
@@ -92,36 +94,28 @@ async function resetDatabase() {
         ('Hello', 'Martina', 'Hello', 'Image', 'Martina')
       `);
 
-          // Seed the funstuff table
+    // Seed the funstuff table
     await pool.query(`
     INSERT INTO funstuff (title, description, link, imglink, category)
     VALUES
-    ('Hello', 'Martina', 'Hello', 'Image', 'Hello'),
-    ('Hello', 'Martina', 'Hello', 'Image', 'Hello'),
-    ('Hello', 'Martina', 'Hello', 'Image', 'Hello'),
-    ('Hello', 'Martina', 'Hello', 'Image', 'Hello'),
-    ('Hello', 'Martina', 'Hello', 'Image', 'Hello'),
-    ('Hello', 'Martina', 'Hello', 'Image', 'Hello'),
-    ('Hello', 'Martina', 'Hello', 'Image', 'Hello'),
-    ('Hello', 'Martina', 'Hello', 'Image', 'Hello'),
-    ('Hello', 'Martina', 'Hello', 'Image', 'Hello'),
-    ('Hello', 'Martina', 'Hello', 'Image', 'Hello'),
+    ('MY FAVOURITE STUDY TUNES', 'Deep Focus Music To Improve Concentration - 12 Hours of Ambient Study Music to Concentrate #601', 'https://www.youtube.com/live/Djz6sfWGmgM?si=YDLvKqOksLBX_ZY5', 'Image', 'Jasim'),
+    ('Welcome to CSSBattle', 'Cascading Style Sheets Battle: Where Pixels and Pizzazz Collide!', 'https://cssbattle.dev/', 'Image', 'Jasim'),
+    ('Joke of the day', 'Get your daily jokes', 'https://www.laughfactory.com/jokes', 'Image', 'Jasim'),
+    ('Comedy Radio Stations from United Kingdom', 'Radio Rascals: Where Laughter Takes the Airwaves!', 'https://mytuner-radio.com/radio/country/united-kingdom/genre/comedy-stations', 'Image', 'Jasim'),
+    ('Hello', 'Martina', 'Hello', 'Image', 'Jasim'),
     ('Hello', 'Martina', 'Hello', 'Image', 'Hello')
   `);
 
-      // Seed the uxdesign table
-      await pool.query(`
+    // Seed the uxdesign table
+    await pool.query(`
       INSERT INTO uxdesign (title, description, link, imglink, category)
       VALUES
       ('Figma', 'Figma Tutorial: A Crash Course for Beginners', 'https://www.youtube.com/watch?v=IOVFRMuPeVQ&t=4125s', 'Image', 'Susan'),
-      ('Other', 'Marty Cagan - The Nature of Product', 'https://youtu.be/T3VRz18ntjQ?si=6wyd71FPhWh1vFMq', 'Image', 'Susan'),
-      ('Hello', 'Martina', 'Hello', 'Image', 'Hello'),
-      ('Hello', 'Martina', 'Hello', 'Image', 'Hello'),
-      ('Hello', 'Martina', 'Hello', 'Image', 'Hello'),
-      ('Hello', 'Martina', 'Hello', 'Image', 'Hello'),
-      ('Hello', 'Martina', 'Hello', 'Image', 'Hello'),
-      ('Hello', 'Martina', 'Hello', 'Image', 'Hello')
-      ('Hello', 'Martina', 'Hello', 'Image', 'Hello'),
+      ('Product', 'Marty Cagan - The Nature of Product', 'https://youtu.be/T3VRz18ntjQ?si=6wyd71FPhWh1vFMq', 'Image', 'Susan'),
+      ('Figma', 'Introducing Figma: A Beginners Tutorial (2023 UI UX Design)', 'https://youtu.be/JGLfyTDgfDc?si=0jmMjWOTcRYMZDfx', 'Image', 'Susan'),
+      ('User research', 'https://www.youtube.com/watch?v=bAARmsv1tms', 'https://youtu.be/bAARmsv1tms?si=EYFEeigISVjhWxMl', 'Image', 'Susan'),
+      ('Wireframe', 'How To Create Your First Wireframe (A UX Tutorial)', 'https://youtu.be/qpH7-KFWZRI?si=B-2M-vnvqJHNQGNL', 'Image', 'Susan'),
+      ('Wireframe', 'How To Make An Effective Customer Journey Map In 1 Hour (FREE Templates)', 'https://youtu.be/68ZXwI5L4kY?si=PlWEXIaGdOBKeZXs', 'Image', 'Susan'),
       ('Hello', 'Martina', 'Hello', 'Image', 'Hello'),
       ('Hello', 'Martina', 'Hello', 'Image', 'Hello')
     `);
