@@ -5,6 +5,8 @@ import morgan from "morgan";
 
 import { frontendRoute } from "./routes/frontendRoute.js";
 import { backendRoute } from "./routes/backendRoute.js";
+import { funstuffRoute } from "./routes/funstuffRoute.js";
+import { uxdesignRoute } from "./routes/uxdesignRoute.js";
 export const app = express();
 
 app.use(morgan("dev"));
@@ -13,7 +15,8 @@ app.use(cors())
 
 app.use("/frontend", frontendRoute);
 app.use("/backend", backendRoute);
-app.use("funstuff", funstuffRoute)
+app.use("funstuff", funstuffRoute);
+app.use("")
 
 // app.get("/", (req, res) => {
 //   console.log("Hello")
