@@ -7,14 +7,15 @@ const app = express();
 app.use(morgan("dev"));
 app.use(express.json());
 
-app.get("/", (_req, res) => {
+app.get("/", (req, res) => {
+  console.log("Hello")
   res.json({ status: "success", data: "This route works!" });
 });
 
 app.get("/frontend", getFrontendList);
 
 
-const PORT = 5500;
+const PORT = 7000;
 
 app.listen(PORT, () => {
   console.log(`Server listening on port ${PORT}`);
