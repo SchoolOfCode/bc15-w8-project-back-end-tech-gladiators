@@ -21,8 +21,8 @@ export async function createUxdesign(uxdesign) {
     uxdesign.title,
     uxdesign.description,
     uxdesign.link,
-    uxdesign.imglnik,
-    uxdesign.category,
+    uxdesign.imglink,
+    uxdesign.category
   ]);
   //return result
   return result.rows[0] || null;

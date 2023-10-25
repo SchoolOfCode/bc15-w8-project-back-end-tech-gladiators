@@ -1,5 +1,5 @@
 import express from "express";
-import * as uxdesignController from "../controllers/uxdesignController";
+import * as uxdesignController from "../controllers/uxdesignController.js";
 
 export const uxdesignRoute = express.Router();
 

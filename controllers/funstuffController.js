@@ -1,4 +1,4 @@
-import { getFunstuff, createFunstuff, deleteFunstuffById } from "../models/funstuffModel";
+import { getFunstuff, createFunstuff, deleteFunstuffById } from "../models/funstuffModel.js";
 
 //HTTP handler for get all
 export async function getFunstuffList(req, res) {

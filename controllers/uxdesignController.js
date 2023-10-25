@@ -2,7 +2,7 @@ import {
   getUxdesign,
   createUxdesign,
   deleteUxdesignById,
-} from "../models/uxdesignModel";
+} from "../models/uxdesignModel.js";
 
 //HTTP handler for get all
 export async function getUxdesignList(req, res) {

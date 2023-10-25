@@ -18,11 +18,13 @@ export async function getBackend() {
 export async function createBackend(backend) {
   // Query the database to create an backend and return the newly created backend
   const queryText =
-    "INSERT INTO backend (title, description, link) VALUES ($1, $2, $3) RETURNING *";
+    "INSERT INTO backend (title, description, link, imglink, category) VALUES ($1, $2, $3, $4, $5) RETURNING *";
   const result = await pool.query(queryText, [
     backend.title,
     backend.description,
     backend.link,
+    backend.imglink,
+    backend.category
   ]);
   //return result
   return result.rows[0] || null;
