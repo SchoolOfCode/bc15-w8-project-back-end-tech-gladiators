@@ -6,19 +6,39 @@ import {
 
 //HTTP handler for get all
 export async function getUxdesignList(req, res) {
-  const UxdesignData = await getUxdesign();
-  res.status(200).send({ status: "success", data: UxdesignData });
-  console.log(UxdesignData);
+  try {
+    const UxdesignData = await getUxdesign();
+    res.status(200).send({ status: "success", data: UxdesignData });
+    console.log(UxdesignData);
+  } catch {
+    res
+      .status(500)
+      .send({
+        status: "error",
+        message: "An error occurred while fetching UX design data.",
+      });
+    console.error(error);
+  }
 }
 
 //HTTP handler route for POST
 export async function postUxdesign(req, res) {
-  //store in a variable the req.body
-  const newData = req.body;
-  //store in a variable the await promise
-  const newUxdesignData = await createUxdesign(newData);
-  //return status
-  res.status(201).json({ status: "success", data: newUxdesignData });
+  try {
+    //store in a variable the req.body
+    const newData = req.body;
+    //store in a variable the await promise
+    const newUxdesignData = await createUxdesign(newData);
+    //return status
+    res.status(201).json({ status: "success", data: newUxdesignData });
+  } catch {
+    res
+      .status(500)
+      .send({
+        status: "error",
+        message: "An error occurred while creating UX design data.",
+      });
+    console.error(error);
+  }
 }
 
 //Endpoint to delete item by id

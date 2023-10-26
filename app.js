@@ -1,19 +1,22 @@
+//import files
 import express from "express";
 import cors from "cors";
 import morgan from "morgan";
-// import { getFrontendList, postFrontend, deleteFrontend, } from "./controllers/frontendController.js";
 
+//import all routes from their files
 import { frontendRoute } from "./routes/frontendRoute.js";
 import { backendRoute } from "./routes/backendRoute.js";
 import { funstuffRoute } from "./routes/funstuffRoute.js";
 import { uxdesignRoute } from "./routes/uxdesignRoute.js";
 import { userRoute } from "./routes/userRoute.js";
+
 export const app = express();
 
 app.use(morgan("dev"));
 app.use(express.json());
 app.use(cors());
 
+//express your routes and path
 app.use("/frontend", frontendRoute);
 app.use("/backend", backendRoute);
 app.use("/funstuff", funstuffRoute);
