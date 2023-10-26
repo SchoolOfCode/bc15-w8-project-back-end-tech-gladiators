@@ -5,13 +5,12 @@ import bcrypt, { hash } from "bcrypt";
 const saltRounds = 10;
 
 //get user by id
-export async function getUserByNameAndPassword(name, password) {
+export async function getUserByNameAndPassword(username, password) {
   // Query the database and return the user with a matching name and password
   //initiate variable to store our SQL query string
-  console.log(name, password)
-  const queryText = "SELECT * FROM users WHERE name = $1";
+  const queryText = "SELECT * FROM users WHERE username = $1";
   //await the pool query to send the query to the database
-  const result = await pool.query(queryText, [name]);
+  const result = await pool.query(queryText, [username]);
   //return the user in the row with the specific details
   //otherwise our return will be NULL
   let passwordCheck = result.rows[0].password

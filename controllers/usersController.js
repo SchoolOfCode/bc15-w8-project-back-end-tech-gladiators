@@ -3,10 +3,10 @@ import { createUser, getUserByNameAndPassword } from "../models/usersModel.js";
 export async function getUserNamePassword(req, res) {
   try {
     //store in a variable your req.params.id
-    const name = req.body.name;
+    const username = req.body.username;
     const password = req.body.password;
     //store in a variable the await promise
-    const user = await getUserByNameAndPassword(name, password);
+    const user = await getUserByNameAndPassword(username, password);
     //404 error if user not found
     if (!user) {
       console.log("User not found!");
