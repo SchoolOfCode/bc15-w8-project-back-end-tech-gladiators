@@ -127,11 +127,11 @@ async function resetDatabase() {
     await pool.query(`
       INSERT INTO users (name, email, username, password)
       VALUES
-      ('Martina', 'martina@gmail.com', 'Martina', 'Team4M'),
-      ('Danny', 'danny@gmail.com', 'Danny', 'Team4D'),
-      ('Susan', 'susan@gmail.com', 'Susan', 'Team4S'),
-      ('Livi', 'livi@gmail.com', 'Livi', 'Team4L'),
-      ('Jasim', 'jasim@gmail.com', 'Jasim', 'Team4J')
+      ('Martina Zurli', 'martina@gmail.com', 'Martina', 'Team4M'),
+      ('Danny Ryan', 'danny@gmail.com', 'Danny', 'Team4D'),
+      ('Susan Williams', 'susan@gmail.com', 'Susan', 'Team4S'),
+      ('Olivia Johnson', 'livi@gmail.com', 'Livi', 'Team4L'),
+      ('Md Jasim Chowdhury', 'jasim@gmail.com', 'Jasim', 'Team4J')
     `);
 
     console.log("Database reset successful");
