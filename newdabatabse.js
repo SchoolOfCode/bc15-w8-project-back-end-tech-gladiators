@@ -47,12 +47,12 @@
     await pool.query(`
       INSERT INTO uxdesign (title, description, link, imglink, category)
       VALUES
-      ('Figma', 'Figma Tutorial: A Crash Course for Beginners', 'https://www.youtube.com/watch?v=IOVFRMuPeVQ&t=4125s', 'Image', 'Susan'),
-      ('Product', 'Marty Cagan - The Nature of Product', 'https://youtu.be/T3VRz18ntjQ?si=6wyd71FPhWh1vFMq', 'Image', 'Susan'),
-      ('Figma', 'Introducing Figma: A Beginners Tutorial (2023 UI UX Design)', 'https://youtu.be/JGLfyTDgfDc?si=0jmMjWOTcRYMZDfx', 'Image', 'Susan'),
-      ('User research', 'https://www.youtube.com/watch?v=bAARmsv1tms', 'https://youtu.be/bAARmsv1tms?si=EYFEeigISVjhWxMl', 'Image', 'Susan'),
-      ('Wireframe', 'How To Create Your First Wireframe (A UX Tutorial)', 'https://youtu.be/qpH7-KFWZRI?si=B-2M-vnvqJHNQGNL', 'Image', 'Susan'),
-      ('Wireframe', 'How To Make An Effective Customer Journey Map In 1 Hour (FREE Templates)', 'https://youtu.be/68ZXwI5L4kY?si=PlWEXIaGdOBKeZXs', 'Image', 'Susan'),
+      ('Figma', 'Figma Tutorial: A Crash Course for Beginners', 'https://www.youtube.com/watch?v=IOVFRMuPeVQ&t=4125s', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTc3RX9EOleUkVvpzT4Vgj1EgELCZfw72dxDQ&usqp=CAU', 'Susan'),
+      ('Product', 'Marty Cagan - The Nature of Product', 'https://youtu.be/T3VRz18ntjQ?si=6wyd71FPhWh1vFMq', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZXosVqBmAOxUrSnvU-6x4DZniR5DPg2Py3g&usqp=CAU', 'Susan'),
+      ('Figma', 'Introducing Figma: A Beginners Tutorial (2023 UI UX Design)', 'https://youtu.be/JGLfyTDgfDc?si=0jmMjWOTcRYMZDfx', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQP-p4pj3sG5jPDPXxL5cvbT9fM_B6vtv2oow&usqp=CAU', 'Susan'),
+      ('User research', 'https://www.youtube.com/watch?v=bAARmsv1tms', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQl2DYI0z1p-L5REOZx2Asp1Gv298TapfHvqQ&usqp=CAU', 'Susan'),
+      ('Wireframe', 'How To Create Your First Wireframe (A UX Tutorial)', 'https://youtu.be/qpH7-KFWZRI?si=B-2M-vnvqJHNQGNL', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzkB1rertiIxa9kkL80ioF17L5xAO9lWRTng&usqp=CAU', 'Susan'),
+      ('Wireframe', 'How To Make An Effective Customer Journey Map In 1 Hour (FREE Templates)', 'https://youtu.be/68ZXwI5L4kY?si=PlWEXIaGdOBKeZXs', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7MKC18oS9oWX56Vw5rl9e1eWAkRwokQ4QmQ&usqp=CAU', 'Susan'),
       ('Hello', 'Martina', 'Hello', 'Image', 'Hello'),
       ('Hello', 'Martina', 'Hello', 'Image', 'Hello')
     `);
