@@ -4,7 +4,7 @@ import * as userController from "../controllers/usersController.js"; //import al
 export const userRoute = express.Router();
 
 //user router and express method using controller functions
-userRoute.get("/", userController.getUserNamePassword);
-userRoute.post("/", userController.postUser);
+userRoute.post("/login", userController.getUserNamePassword);
+userRoute.post("/newuser", userController.postUser);
 
 
