@@ -2,17 +2,15 @@
     await pool.query(`
       INSERT INTO frontend (title, description, link, imglink, category)
       VALUES
-        ('CSS', 'Learn CSS Grid - A 13 Minute Deep Dive', 'https://youtu.be/EiNiSFIPIQE?si=snHGlSNCbFH_ugdH', 'Image', 'Martina'),
-        ('CSS', 'Learn CSS Positioning Quickly With A Real World Example', 'https://youtu.be/MxEtxo_AaZ4?si=JjoJixNuSRi9WoCw', 'Image', 'Martina'),
-        ('CSS', 'Learn CSS Position In 9 Minutes', 'https://youtu.be/jx5jmI0UlXU?si=hDX-wvfnsBNE6kiX', 'Image', 'Martina'),
-        ('CSS', 'Learn Flexbox in 15 Minutes', 'https://youtu.be/fYq5PXgSsbE?si=QncpKLnJWjkfooIj', 'Image', 'Martina'),
-        ('JavaScript', 'Learn JavaScript Event Listeners In 18 Minutes', 'https://youtu.be/XF1_MlZ5l6M?si=HzHOZBpzBs4XDesr', 'Image', 'Martina'),
-        ('JavaScript', 'How To Make Your Own JavaScript Events', 'https://youtu.be/DzZXRvk3EGg?si=o4qMo9wxiKa2klhT', 'Image', 'Martina'),
-        ('JavaScript', 'Learn Pointer Events In 15 Minutes', 'https://youtu.be/MhUCYR9Tb9c?si=7PCDEysTHWK7an_B', 'Image', 'Martina'),
-        ('JavaScript', 'Learn JavaScript DOM Traversal In 15 Minutes', 'https://youtu.be/v7rSSy8CaYE?si=1ycToe-WB5UeBhMF', 'Image', 'Martina'),
-        ('HTMl & CSS', 'Learn HTML5 and CSS3 For Beginners - Crash Course', 'https://youtu.be/vQWlgd7hV4A?si=S8B_1W-DEwlww5lX', 'Image', 'Martina'),
-        ('Hello', 'Martina', 'Hello', 'Image', 'Martina'),
-        ('Hello', 'Martina', 'Hello', 'Image', 'Martina')
+        ('CSS', 'Learn CSS Grid - A 13 Minute Deep Dive', 'https://youtu.be/EiNiSFIPIQE?si=snHGlSNCbFH_ugdH', 'https://i.ytimg.com/vi/EiNiSFIPIQE/hqdefault.jpg', 'Martina'),
+        ('CSS', 'Learn CSS Positioning Quickly With A Real World Example', 'https://youtu.be/MxEtxo_AaZ4?si=JjoJixNuSRi9WoCw', 'https://i.ytimg.com/vi/MxEtxo_AaZ4/hqdefault.jpg', 'Martina'),
+        ('CSS', 'Learn CSS Position In 9 Minutes', 'https://youtu.be/jx5jmI0UlXU?si=hDX-wvfnsBNE6kiX', 'https://i.ytimg.com/vi/jx5jmI0UlXU/hqdefault.jpg', 'Martina'),
+        ('CSS', 'Learn Flexbox in 15 Minutes', 'https://youtu.be/fYq5PXgSsbE?si=QncpKLnJWjkfooIj', 'https://i.ytimg.com/vi/fYq5PXgSsbE/hqdefault.jpg', 'Martina'),
+        ('JavaScript', 'Learn JavaScript Event Listeners In 18 Minutes', 'https://youtu.be/XF1_MlZ5l6M?si=HzHOZBpzBs4XDesr', 'https://i.ytimg.com/vi/XF1_MlZ5l6M/sddefault.jpg', 'Martina'),
+        ('JavaScript', 'How To Make Your Own JavaScript Events', 'https://youtu.be/DzZXRvk3EGg?si=o4qMo9wxiKa2klhT', 'https://i.ytimg.com/vi/XF1_MlZ5l6M/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLC3O0g8wK51hmlyp8dnoPEKHgVy8A', 'Martina'),
+        ('JavaScript', 'Learn Pointer Events In 15 Minutes', 'https://youtu.be/MhUCYR9Tb9c?si=7PCDEysTHWK7an_B', 'https://i.ytimg.com/vi/MhUCYR9Tb9c/hqdefault.jpg', 'Martina'),
+        ('JavaScript', 'Learn JavaScript DOM Traversal In 15 Minutes', 'https://youtu.be/v7rSSy8CaYE?si=1ycToe-WB5UeBhMF', 'https://i.ytimg.com/vi/v7rSSy8CaYE/sddefault.jpg', 'Martina'),
+        ('HTMl & CSS', 'Learn HTML5 and CSS3 For Beginners - Crash Course', 'https://youtu.be/vQWlgd7hV4A?si=S8B_1W-DEwlww5lX', 'https://i.ytimg.com/vi/FZnQAUd9TQY/sddefault.jpg', 'Martina')
     `);
 
     // Seed the backend table
@@ -38,9 +36,7 @@
     ('MY FAVOURITE STUDY TUNES', 'Deep Focus Music To Improve Concentration - 12 Hours of Ambient Study Music to Concentrate #601', 'https://www.youtube.com/live/Djz6sfWGmgM?si=YDLvKqOksLBX_ZY5', 'Image', 'Jasim'),
     ('Welcome to CSSBattle', 'Cascading Style Sheets Battle: Where Pixels and Pizzazz Collide!', 'https://cssbattle.dev/', 'Image', 'Jasim'),
     ('Joke of the day', 'Get your daily jokes', 'https://www.laughfactory.com/jokes', 'Image', 'Jasim'),
-    ('Comedy Radio Stations from United Kingdom', 'Radio Rascals: Where Laughter Takes the Airwaves!', 'https://mytuner-radio.com/radio/country/united-kingdom/genre/comedy-stations', 'Image', 'Jasim'),
-    ('Hello', 'Martina', 'Hello', 'Image', 'Jasim'),
-    ('Hello', 'Martina', 'Hello', 'Image', 'Hello')
+    ('Comedy Radio Stations from United Kingdom', 'Radio Rascals: Where Laughter Takes the Airwaves!', 'https://mytuner-radio.com/radio/country/united-kingdom/genre/comedy-stations', 'Image', 'Jasim')
   `);
 
     // Seed the uxdesign table
@@ -52,7 +48,5 @@
       ('Figma', 'Introducing Figma: A Beginners Tutorial (2023 UI UX Design)', 'https://youtu.be/JGLfyTDgfDc?si=0jmMjWOTcRYMZDfx', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQP-p4pj3sG5jPDPXxL5cvbT9fM_B6vtv2oow&usqp=CAU', 'Susan'),
       ('User research', 'https://www.youtube.com/watch?v=bAARmsv1tms', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQl2DYI0z1p-L5REOZx2Asp1Gv298TapfHvqQ&usqp=CAU', 'Susan'),
       ('Wireframe', 'How To Create Your First Wireframe (A UX Tutorial)', 'https://youtu.be/qpH7-KFWZRI?si=B-2M-vnvqJHNQGNL', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzkB1rertiIxa9kkL80ioF17L5xAO9lWRTng&usqp=CAU', 'Susan'),
-      ('Wireframe', 'How To Make An Effective Customer Journey Map In 1 Hour (FREE Templates)', 'https://youtu.be/68ZXwI5L4kY?si=PlWEXIaGdOBKeZXs', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7MKC18oS9oWX56Vw5rl9e1eWAkRwokQ4QmQ&usqp=CAU', 'Susan'),
-      ('Hello', 'Martina', 'Hello', 'Image', 'Hello'),
-      ('Hello', 'Martina', 'Hello', 'Image', 'Hello')
+      ('Wireframe', 'How To Make An Effective Customer Journey Map In 1 Hour (FREE Templates)', 'https://youtu.be/68ZXwI5L4kY?si=PlWEXIaGdOBKeZXs', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7MKC18oS9oWX56Vw5rl9e1eWAkRwokQ4QmQ&usqp=CAU', 'Susan')
     `);
