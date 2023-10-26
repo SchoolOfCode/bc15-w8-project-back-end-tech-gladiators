@@ -33,10 +33,10 @@
     await pool.query(`
     INSERT INTO funstuff (title, description, link, imglink, category)
     VALUES
-    ('MY FAVOURITE STUDY TUNES', 'Deep Focus Music To Improve Concentration - 12 Hours of Ambient Study Music to Concentrate #601', 'https://www.youtube.com/live/Djz6sfWGmgM?si=YDLvKqOksLBX_ZY5', 'Image', 'Jasim'),
-    ('Welcome to CSSBattle', 'Cascading Style Sheets Battle: Where Pixels and Pizzazz Collide!', 'https://cssbattle.dev/', 'Image', 'Jasim'),
-    ('Joke of the day', 'Get your daily jokes', 'https://www.laughfactory.com/jokes', 'Image', 'Jasim'),
-    ('Comedy Radio Stations from United Kingdom', 'Radio Rascals: Where Laughter Takes the Airwaves!', 'https://mytuner-radio.com/radio/country/united-kingdom/genre/comedy-stations', 'Image', 'Jasim')
+    ('MY FAVOURITE STUDY TUNES', 'Deep Focus Music To Improve Concentration - 12 Hours of Ambient Study Music to Concentrate #601', 'https://www.youtube.com/live/Djz6sfWGmgM?si=YDLvKqOksLBX_ZY5', 'https://e.snmc.io/i/300/s/fe53e7917decee9cf2b2faf195e72bc5/8431694', 'Jasim'),
+    ('Welcome to CSSBattle', 'Cascading Style Sheets Battle: Where Pixels and Pizzazz Collide!', 'https://cssbattle.dev/', 'https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Fi.imgur.com%2Ff4MfHUyh.jpg', 'Jasim'),
+    ('Joke of the day', 'Get your daily jokes', 'https://www.laughfactory.com/jokes', 'https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Fi.imgur.com%2FR3NsSPkh.jpg', 'Jasim'),
+    ('Comedy Radio Stations from United Kingdom', 'Radio Rascals: Where Laughter Takes the Airwaves!', 'https://mytuner-radio.com/radio/country/united-kingdom/genre/comedy-stations', 'https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Fi.imgur.com%2FRCnkT2Hh.jpg', 'Jasim')
   `);
 
     // Seed the uxdesign table
