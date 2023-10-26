@@ -66,7 +66,8 @@ async function resetDatabase() {
         name VARCHAR(255) NOT NULL,
         email VARCHAR(255) NOT NULL,
         username VARCHAR(255) NOT NULL,
-        password VARCHAR(255) NOT NULL
+        password VARCHAR(255) NOT NULL,
+        imglink VARCHAR(255)
       );
     `);
 
@@ -125,13 +126,13 @@ async function resetDatabase() {
 
     //Seed the users table
     await pool.query(`
-      INSERT INTO users (name, email, username, password)
+      INSERT INTO users (name, email, username, password, imglink)
       VALUES
-      ('Martina Zurli', 'martina@gmail.com', 'Martina', 'Team4M'),
-      ('Danny Ryan', 'danny@gmail.com', 'Danny', 'Team4D'),
-      ('Susan Williams', 'susan@gmail.com', 'Susan', 'Team4S'),
-      ('Olivia Johnson', 'livi@gmail.com', 'Livi', 'Team4L'),
-      ('Md Jasim Chowdhury', 'jasim@gmail.com', 'Jasim', 'Team4J')
+      ('Martina Zurli', 'martina@gmail.com', 'Martina', 'Team4M', '123'),
+      ('Danny Ryan', 'danny@gmail.com', 'Danny', 'Team4D', '123'),
+      ('Susan Williams', 'susan@gmail.com', 'Susan', 'Team4S', '123'),
+      ('Olivia Johnson', 'livi@gmail.com', 'Livi', 'Team4L', '123'),
+      ('Md Jasim Chowdhury', 'jasim@gmail.com', 'Jasim', 'Team4J', '123')
     `);
 
     console.log("Database reset successful");

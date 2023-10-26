@@ -24,7 +24,7 @@ export async function getUserByNameAndPassword(username, password) {
 export async function createUser(user) {
   // Query the database to create an director and return the newly created user
   const queryText =
-    "INSERT INTO users (name, email, username, password) VALUES ($1, $2, $3, $4) RETURNING *";
+    "INSERT INTO users (name, email, username, password, imglink) VALUES ($1, $2, $3, $4, $5) RETURNING *";
   //define elements of the request and placeholder values
   //hash password before storing
   const hash = await bcrypt.hash(user.password, 10)
@@ -34,6 +34,7 @@ export async function createUser(user) {
     user.email,
     user.username,
     hash,
+    user.imglink
   ]);
   //return result
   return result.rows[0] || null;
