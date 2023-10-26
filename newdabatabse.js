@@ -19,19 +19,16 @@
     await pool.query(`
         INSERT INTO backend (title, description, link, imglink, category)
         VALUES
-        ('JavaScript', 'Learn Fetch API In 6 Minutes', 'https://youtu.be/cuEtnrL9-H0?si=Rp-W_qbDP419SaVb', 'Image', 'Martina'),
-        ('JavaScript', 'JavaScript Promises In 10 Minutes', 'Hello', 'Image', 'Hello'),
-        ('JavaScript', 'JavaScript Promises In 10 Minutes', 'https://youtu.be/DHvZLI7Db8E?si=2AHgcipfzCzHJrK9', 'Image', 'Martina'),
-        ('JavaScript', 'Learn JSON in 10 Minutes', 'https://youtu.be/iiADhChRriM?si=I6jTli1nFMkoTjhX', 'Image', 'Martina'),
-        ('JavaScript', 'Learn SQL In 60 Minutes', 'https://youtu.be/p3qvj9hO_Bo?si=tfkqcaKO6cJxMYGB', 'Image', 'Martina'),
-        ('Python', 'Python As Fast as Possible - Learn Python in ~75 Minutes', 'https://youtu.be/VchuKL44s6E?si=i_9AK4RVRlEii45O', 'Image', 'Martina'),
-        ('JavaScript', '8 Must Know JavaScript Array Methods', 'https://youtu.be/R8rmfD9Y5-c?si=pdt7kCPBn_FF5E8E', 'Image', 'Martina'),
-        ('JavaScript', 'Why Is Array/Object Destructuring So Useful And How To Use It', 'https://youtu.be/NIq3qLaHCIs?si=-0D2V0acPIPCVXVM', 'Image', 'Martina'),
-        ('JavaScript', 'JavaScript Testing Introduction Tutorial - Unit Tests, Integration Tests & e2e Tests', 'https://youtu.be/r9HdJ8P6GQI?si=-ZYT9Xq9gm7KUcJ1', 'Image', 'Susan'),
-        ('JavaScript', 'CRUD operations in JavaScript using LocalStorage | CRUD operations in HTML CSS JavaScript (easy way)', 'https://youtu.be/gSdFqxnWBMM?si=yS1Ell-pA_VtSsuc', 'Image', 'Martina'),
-        ('JavaScript', 'NEW Way To Create Variables In JavaScript', 'https://youtu.be/d6a8RymS1zI?si=-APpE3rkInIwlFXu', 'Image', 'Martina'),
-        ('Hello', 'Martina', 'Hello', 'Image', 'Martina'),
-        ('Hello', 'Martina', 'Hello', 'Image', 'Martina')
+        ('JavaScript', 'Learn Fetch API In 6 Minutes', 'https://youtu.be/cuEtnrL9-H0?si=Rp-W_qbDP419SaVb', 'https://i.ytimg.com/vi/cuEtnrL9-H0/maxresdefault.jpg', 'Martina'),
+        ('JavaScript', 'JavaScript Promises In 10 Minutes', 'https://youtu.be/DHvZLI7Db8E?si=2AHgcipfzCzHJrK9', 'https://i.ytimg.com/vi/DHvZLI7Db8E/maxresdefault.jpg', 'Martina'),
+        ('JavaScript', 'Learn JSON in 10 Minutes', 'https://youtu.be/iiADhChRriM?si=I6jTli1nFMkoTjhX', 'https://i.ytimg.com/vi/s6OIOL9OMYA/maxresdefault.jpg', 'Martina'),
+        ('JavaScript', 'Learn SQL In 60 Minutes', 'https://youtu.be/p3qvj9hO_Bo?si=tfkqcaKO6cJxMYGB', 'https://blog.logrocket.com/wp-content/uploads/2022/01/build-rest-api-node-express-mysql.png', 'Martina'),
+        ('Python', 'Python As Fast as Possible - Learn Python in ~75 Minutes', 'https://youtu.be/VchuKL44s6E?si=i_9AK4RVRlEii45O', 'https://i.ytimg.com/vi/VchuKL44s6E/hqdefault.jpg', 'Martina'),
+        ('JavaScript', '8 Must Know JavaScript Array Methods', 'https://youtu.be/R8rmfD9Y5-c?si=pdt7kCPBn_FF5E8E', 'https://miro.medium.com/v2/resize:fit:850/1*u3B4WOHzBXlVvy9pe1pdxg.jpeg', 'Martina'),
+        ('JavaScript', 'Why Is Array/Object Destructuring So Useful And How To Use It', 'https://youtu.be/NIq3qLaHCIs?si=-0D2V0acPIPCVXVM', 'https://miro.medium.com/v2/resize:fit:744/1*Z7_fiwo4Bwqdjw8VsHP5pg.png', 'Martina'),
+        ('JavaScript', 'JavaScript Testing Introduction Tutorial - Unit Tests, Integration Tests & e2e Tests', 'https://youtu.be/r9HdJ8P6GQI?si=-ZYT9Xq9gm7KUcJ1', 'https://miro.medium.com/v2/resize:fit:996/1*lqWygfNJqWQ4VCyjecQ6Eg.png', 'Susan'),
+        ('JavaScript', 'CRUD operations in JavaScript using LocalStorage | CRUD operations in HTML CSS JavaScript (easy way)', 'https://youtu.be/gSdFqxnWBMM?si=yS1Ell-pA_VtSsuc', 'https://i.ytimg.com/vi/La5cL2jNoVw/sddefault.jpg', 'Martina'),
+        ('JavaScript', 'NEW Way To Create Variables In JavaScript', 'https://youtu.be/d6a8RymS1zI?si=-APpE3rkInIwlFXu', 'https://www.wikihow.com/images/thumb/7/7e/Declare-a-Variable-in-Javascript-Step-2.jpg/v4-460px-Declare-a-Variable-in-Javascript-Step-2.jpg.webp', 'Martina')
       `);
 
     // Seed the funstuff table
