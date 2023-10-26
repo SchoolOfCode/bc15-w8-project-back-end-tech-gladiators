@@ -16,9 +16,9 @@ export async function postUxdesign(req, res) {
   //store in a variable the req.body
   const newData = req.body;
   //store in a variable the await promise
-  const newDUxdesignData = await createUxdesign(newData);
+  const newUxdesignData = await createUxdesign(newData);
   //return status
-  res.status(201).json({ status: "success", data: newDUxdesignData });
+  res.status(201).json({ status: "success", data: newUxdesignData });
 }
 
 //Endpoint to delete item by id

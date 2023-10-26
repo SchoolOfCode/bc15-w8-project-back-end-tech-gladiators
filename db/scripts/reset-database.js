@@ -8,6 +8,7 @@ async function resetDatabase() {
       DROP TABLE IF EXISTS backend CASCADE;
       DROP TABLE IF EXISTS funstuff CASCADE;
       DROP TABLE IF EXISTS uxdesign CASCADE;
+      DROP TABLE IF EXISTS users CASCADE;
     `);
 
     // Create the frontend table
@@ -57,6 +58,16 @@ async function resetDatabase() {
       category VARCHAR(255) NOT NULL
     );
   `);
+
+    // Create the users table
+    await pool.query(`
+      CREATE TABLE users (
+        id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+        name VARCHAR(255) NOT NULL,
+        email VARCHAR(255) NOT NULL,
+        password VARCHAR(255) NOT NULL
+      );
+    `);
 
     // Seed the frontend table
     await pool.query(`
@@ -118,6 +129,17 @@ async function resetDatabase() {
       ('Wireframe', 'How To Make An Effective Customer Journey Map In 1 Hour (FREE Templates)', 'https://youtu.be/68ZXwI5L4kY?si=PlWEXIaGdOBKeZXs', 'Image', 'Susan'),
       ('Hello', 'Martina', 'Hello', 'Image', 'Hello'),
       ('Hello', 'Martina', 'Hello', 'Image', 'Hello')
+    `);
+
+    // Seed the uxdesign table
+    await pool.query(`
+      INSERT INTO users (name, email, password)
+      VALUES
+      ('Martina', 'martina@gmail.com', 'Team4M'),
+      ('Danny', 'danny@gmail.com', 'Team4D'),
+      ('Susan', 'susan@gmail.com', 'Team4S'),
+      ('Livi', 'livi@gmail.com', 'Team4L'),
+      ('Jasim', 'jasim@gmail.com', 'Team4J')
     `);
 
     console.log("Database reset successful");

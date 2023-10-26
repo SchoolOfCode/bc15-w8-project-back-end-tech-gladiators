@@ -17,3 +17,4 @@ app.use("/frontend", frontendRoute);
 app.use("/backend", backendRoute);
 app.use("/funstuff", funstuffRoute);
 app.use("/uxdesign", uxdesignRoute);
+

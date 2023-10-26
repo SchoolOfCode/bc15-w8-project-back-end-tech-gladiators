@@ -6,3 +6,4 @@ export const funstuffRoute = express.Router();
 funstuffRoute.get("/", funstuffController.getFunstuffList);
 funstuffRoute.post("/", funstuffController.postFunstuff);
 funstuffRoute.delete("/:id", funstuffController.deleteFunstuff);
+
