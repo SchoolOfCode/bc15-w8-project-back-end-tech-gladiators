@@ -65,6 +65,7 @@ async function resetDatabase() {
         id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
         name VARCHAR(255) NOT NULL,
         email VARCHAR(255) NOT NULL,
+        username VARCHAR(255) NOT NULL,
         password VARCHAR(255) NOT NULL
       );
     `);
@@ -133,13 +134,13 @@ async function resetDatabase() {
 
     // Seed the uxdesign table
     await pool.query(`
-      INSERT INTO users (name, email, password)
+      INSERT INTO users (name, email, username, password)
       VALUES
-      ('Martina', 'martina@gmail.com', 'Team4M'),
-      ('Danny', 'danny@gmail.com', 'Team4D'),
-      ('Susan', 'susan@gmail.com', 'Team4S'),
-      ('Livi', 'livi@gmail.com', 'Team4L'),
-      ('Jasim', 'jasim@gmail.com', 'Team4J')
+      ('Martina', 'martina@gmail.com', 'Martina', 'Team4M'),
+      ('Danny', 'danny@gmail.com', 'Danny', Team4D'),
+      ('Susan', 'susan@gmail.com', 'Susan', 'Team4S'),
+      ('Livi', 'livi@gmail.com', 'Livi', 'Team4L'),
+      ('Jasim', 'jasim@gmail.com', 'Jasim', 'Team4J')
     `);
 
     console.log("Database reset successful");
