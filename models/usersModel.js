@@ -16,11 +16,12 @@ export async function getUserByNameAndPassword(name, password) {
 export async function createUser(user) {
   // Query the database to create an director and return the newly created user
   const queryText =
-    "INSERT INTO users (name, email, password) VALUES ($1, $2, $3) RETURNING *";
-    //define elements of the request and placeholder values
+    "INSERT INTO users (name, email, username, password) VALUES ($1, $2, $3, $4) RETURNING *";
+  //define elements of the request and placeholder values
   const result = await pool.query(queryText, [
     user.name,
     user.email,
+    user.username,
     user.password,
   ]);
   //return result
