@@ -4,7 +4,7 @@ import bcrypt, { hash } from "bcrypt";
 
 const saltRounds = 10;
 
-//get user by id
+//get user by username 
 export async function getUserByNameAndPassword(username, password) {
   // Query the database and return the user with a matching name and password
   //initiate variable to store our SQL query string
@@ -28,7 +28,7 @@ export async function createUser(user) {
   //define elements of the request and placeholder values
   //hash password before storing
   const hash = await bcrypt.hash(user.password, 10)
-
+console.log(hash)
   const result = await pool.query(queryText, [
     user.name,
     user.email,
@@ -37,5 +37,16 @@ export async function createUser(user) {
     user.imglink
   ]);
   //return result
+  return result.rows[0] || null;
+}
+
+//get user by id
+export async function getUserById(id){
+    // Query the database and return the user with a matching name and password
+  //initiate variable to store our SQL query string
+  console.log('hello' + typeof Number(id))
+  const queryText = "SELECT * FROM users WHERE id = $1";
+  //await the pool query to send the query to the database
+  const result = await pool.query(queryText, [id]);
   return result.rows[0] || null;
 }

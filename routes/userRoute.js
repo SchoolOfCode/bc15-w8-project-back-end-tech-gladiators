@@ -6,5 +6,6 @@ export const userRoute = express.Router();
 //user router and express method using controller functions
 userRoute.post("/login", userController.getUserNamePassword);
 userRoute.post("/newuser", userController.postUser);
+userRoute.post("/user", userController.getUser);
 
 

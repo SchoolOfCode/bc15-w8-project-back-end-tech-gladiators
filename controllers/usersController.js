@@ -1,4 +1,4 @@
-import { createUser, getUserByNameAndPassword } from "../models/usersModel.js";
+import { createUser, getUserByNameAndPassword, getUserById } from "../models/usersModel.js";
 
 export async function getUserNamePassword(req, res) {
   try {
@@ -25,6 +25,31 @@ export async function getUserNamePassword(req, res) {
       });
   }
 }
+
+export async function getUser(req, res) {
+  try {
+  const id = req.body.id
+
+  const user = await getUserById(id);
+
+if (!user) {
+  console.log("User not found!");
+  return res.status(404).json({ status: "fail", data: "User not found." });
+}
+
+res.status(200).json({ status: "success", data: user });
+  } catch (error) {
+    // Handle unexpected errors, e.g., database connection errors, server errors.
+    console.error(error);
+    res
+      .status(500)
+      .json({
+        status: "error",
+        message: "An error occurred while fetching user data.",
+      });
+  }
+}
+
 
 //HTTP handler to create user
 export async function postUser(req, res) {
