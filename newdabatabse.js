@@ -2,15 +2,15 @@
     await pool.query(`
       INSERT INTO frontend (title, description, link, imglink, category)
       VALUES
-        ('CSS', 'Learn CSS Grid - A 13 Minute Deep Dive', 'https://youtu.be/EiNiSFIPIQE?si=snHGlSNCbFH_ugdH', 'https://i.ytimg.com/vi/EiNiSFIPIQE/hqdefault.jpg', 'Martina'),
-        ('CSS', 'Learn CSS Positioning Quickly With A Real World Example', 'https://youtu.be/MxEtxo_AaZ4?si=JjoJixNuSRi9WoCw', 'https://i.ytimg.com/vi/MxEtxo_AaZ4/hqdefault.jpg', 'Martina'),
-        ('CSS', 'Learn CSS Position In 9 Minutes', 'https://youtu.be/jx5jmI0UlXU?si=hDX-wvfnsBNE6kiX', 'https://i.ytimg.com/vi/jx5jmI0UlXU/hqdefault.jpg', 'Martina'),
-        ('CSS', 'Learn Flexbox in 15 Minutes', 'https://youtu.be/fYq5PXgSsbE?si=QncpKLnJWjkfooIj', 'https://i.ytimg.com/vi/fYq5PXgSsbE/hqdefault.jpg', 'Martina'),
-        ('JavaScript', 'Learn JavaScript Event Listeners In 18 Minutes', 'https://youtu.be/XF1_MlZ5l6M?si=HzHOZBpzBs4XDesr', 'https://i.ytimg.com/vi/XF1_MlZ5l6M/sddefault.jpg', 'Martina'),
+        ('Learn CSS Grid', 'A 13 Minute Deep Dive', 'https://youtu.be/EiNiSFIPIQE?si=snHGlSNCbFH_ugdH', 'https://i.ytimg.com/vi/EiNiSFIPIQE/hqdefault.jpg', 'Woody'),
+        ('CSS Positioning', 'Learn Quickly With A Real World Example', 'https://youtu.be/MxEtxo_AaZ4?si=JjoJixNuSRi9WoCw', 'https://i.ytimg.com/vi/MxEtxo_AaZ4/hqdefault.jpg', 'KevTrix'),
+        ('A New Way to do CSS', 'A new method for you all!', 'https://youtu.be/jx5jmI0UlXU?si=hDX-wvfnsBNE6kiX', 'https://i.ytimg.com/vi/jx5jmI0UlXU/hqdefault.jpg', 'Henry098'),
+        ('Learn Flexbox in 15 Minutes', 'My fave flexbox tutorial', 'https://youtu.be/fYq5PXgSsbE?si=QncpKLnJWjkfooIj', 'https://i.ytimg.com/vi/fYq5PXgSsbE/hqdefault.jpg', 'Martha'),
+        ("Johnny's top JS Event listeners", 'Event Listeners In 18 Minutes', 'https://youtu.be/XF1_MlZ5l6M?si=HzHOZBpzBs4XDesr', 'https://i.ytimg.com/vi/XF1_MlZ5l6M/sddefault.jpg', 'Johnny'),
         ('JavaScript', 'How To Make Your Own JavaScript Events', 'https://youtu.be/DzZXRvk3EGg?si=o4qMo9wxiKa2klhT', 'https://i.ytimg.com/vi/XF1_MlZ5l6M/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLC3O0g8wK51hmlyp8dnoPEKHgVy8A', 'Martina'),
-        ('JavaScript', 'Learn Pointer Events In 15 Minutes', 'https://youtu.be/MhUCYR9Tb9c?si=7PCDEysTHWK7an_B', 'https://i.ytimg.com/vi/MhUCYR9Tb9c/hqdefault.jpg', 'Martina'),
-        ('JavaScript', 'Learn JavaScript DOM Traversal In 15 Minutes', 'https://youtu.be/v7rSSy8CaYE?si=1ycToe-WB5UeBhMF', 'https://i.ytimg.com/vi/v7rSSy8CaYE/sddefault.jpg', 'Martina'),
-        ('HTMl & CSS', 'Learn HTML5 and CSS3 For Beginners - Crash Course', 'https://youtu.be/vQWlgd7hV4A?si=S8B_1W-DEwlww5lX', 'https://i.ytimg.com/vi/FZnQAUd9TQY/sddefault.jpg', 'Martina')
+        ('JavaScript', 'Learn Pointer Events In 15 Minutes', 'https://youtu.be/MhUCYR9Tb9c?si=7PCDEysTHWK7an_B', 'https://i.ytimg.com/vi/MhUCYR9Tb9c/hqdefault.jpg', 'Buzz-Infinity'),
+        ('King Koopas Top Traversals', 'DOM Traversal Done Right!', 'https://youtu.be/v7rSSy8CaYE?si=1ycToe-WB5UeBhMF', 'https://i.ytimg.com/vi/v7rSSy8CaYE/sddefault.jpg', 'KingKoopa'),
+        ('This Course is Awesome!', 'Learn HTML5 and CSS3 For Beginners - Crash Course', 'https://youtu.be/vQWlgd7hV4A?si=S8B_1W-DEwlww5lX', 'https://i.ytimg.com/vi/FZnQAUd9TQY/sddefault.jpg', 'Frankie')
     `);
 
     // Seed the backend table
