@@ -13,12 +13,25 @@ export async function getUserByNameAndPassword(username, password) {
   const result = await pool.query(queryText, [username]);
   //return the user in the row with the specific details
   //otherwise our return will be NULL
-  let passwordCheck = result.rows[0].password
-  const isMatch = await bcrypt.compare(password, passwordCheck)
-  if(isMatch){
-    return result.rows[0]
+  let passwordCheck = result.rows[0].password;
+  const isMatch = await bcrypt.compare(password, passwordCheck);
+  if (isMatch) {
+    return result.rows[0];
   } else {
-  return null;}
+    return null;
+  }
+}
+
+export async function getUserInfoById(id) {
+  // Query the database and return the user with a matching name and password
+  //initiate variable to store our SQL query string
+  const queryText = "SELECT * FROM users WHERE id = $1";
+  //await the pool query to send the query to the database
+  const result = await pool.query(queryText, [id]);
+  //return the user in the row with the specific details
+  //otherwise our return will be NULL
+  let userInfo = result.rows[0];
+  return userInfo;
 }
 
 export async function createUser(user) {
@@ -27,14 +40,14 @@ export async function createUser(user) {
     "INSERT INTO users (name, email, username, password, imglink) VALUES ($1, $2, $3, $4, $5) RETURNING *";
   //define elements of the request and placeholder values
   //hash password before storing
-  const hash = await bcrypt.hash(user.password, 10)
+  const hash = await bcrypt.hash(user.password, 10);
 
   const result = await pool.query(queryText, [
     user.name,
     user.email,
     user.username,
     hash,
-    user.imglink
+    user.imglink,
   ]);
   //return result
   return result.rows[0] || null;

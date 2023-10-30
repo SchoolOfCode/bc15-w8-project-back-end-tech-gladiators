@@ -8,24 +8,21 @@ export async function getFunstuff() {
   // Use the pool object to send the query to the database
   const result = await pool.query(queryText);
   // The rows property of the result object contains the retrieved records
-  console.log(result);
   return result.rows;
 }
-
-// console.log(getFrontend())
 
 //POST function to add new value in the funstuff table
 export async function createFunstuff(funstuff) {
   // Query the database to create funstuff and return the newly created funstuff
   const queryText =
-    "INSERT INTO funstuff(title, description, link, imglink, category) VALUES ($1, $2, $3, $4, $5) RETURNING *";
+    "INSERT INTO funstuff(title, description, link, imglink, owner) VALUES ($1, $2, $3, $4, $5) RETURNING *";
   //define elements of the request and placeholder values
   const result = await pool.query(queryText, [
     funstuff.title,
     funstuff.description,
     funstuff.link,
     funstuff.imglink,
-    funstuff.category,
+    funstuff.owner,
   ]);
   //return result
   return result.rows[0] || null;

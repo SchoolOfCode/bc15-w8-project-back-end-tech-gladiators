@@ -2,6 +2,7 @@
 import express from "express";
 import cors from "cors";
 import morgan from "morgan";
+import dotenv from "dotenv";
 
 //import all routes from their files
 import { frontendRoute } from "./routes/frontendRoute.js";
@@ -9,6 +10,8 @@ import { backendRoute } from "./routes/backendRoute.js";
 import { funstuffRoute } from "./routes/funstuffRoute.js";
 import { uxdesignRoute } from "./routes/uxdesignRoute.js";
 import { userRoute } from "./routes/userRoute.js";
+
+dotenv.config();
 
 export const app = express();
 

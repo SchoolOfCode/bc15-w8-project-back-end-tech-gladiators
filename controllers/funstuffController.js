@@ -3,21 +3,22 @@ import {
   createFunstuff,
   deleteFunstuffById,
 } from "../models/funstuffModel.js";
+
+import { getUserInfoById } from "../models/usersModel.js";
+
 //HTTP handler for get all
 export async function getFunstuffList(req, res) {
   try {
     const funstuffData = await getFunstuff();
     res.status(200).send({ status: "success", data: funstuffData });
-    console.log(funstuffData);
+    // console.log(funstuffData);
   } catch (error) {
     // Handle unexpected errors, e.g., database connection errors, server errors.
     console.error(error);
-    res
-      .status(500)
-      .json({
-        status: "error",
-        message: "An error occurred while fetching Funstuff data.",
-      });
+    res.status(500).json({
+      status: "error",
+      message: "An error occurred while fetching Funstuff data.",
+    });
   }
 }
 // console.log(getFunstuffList());
@@ -60,6 +61,22 @@ export async function deleteFunstuff(req, res) {
     res.status(500).json({
       status: "error",
       message: "An error occurred while deleting the Funstuff data.",
+    });
+  }
+}
+
+export async function getUserInfo(req, res) {
+  try {
+    const userId = req.body.id; // Assuming the id is in the request body.
+    const userInfo = await getUserInfoById(userId); // Replace with actual function to get user info.
+    res
+      .status(200)
+      .json({ status: "success", data: { username: userInfo.username } });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({
+      status: "error",
+      message: "An error occurred while getting user information.",
     });
   }
 }

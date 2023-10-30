@@ -2,7 +2,7 @@
 import pg from "pg";
 
 // Retrieve the database connection string from environment variables
-const connectionString = "postgres://vurobgmy:LuD8vv-X9cxjBhBdNM9RZoSE-HOnjWIS@surus.db.elephantsql.com/vurobgmy";
+const connectionString = process.env.DB_CONNECTION_STRING;
 
 // Check if the connection string is not defined, and if so, throw an error
 if (!connectionString) {

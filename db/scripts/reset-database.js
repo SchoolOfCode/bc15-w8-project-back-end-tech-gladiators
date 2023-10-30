@@ -19,7 +19,7 @@ async function resetDatabase() {
         description VARCHAR(255) NOT NULL,
         link VARCHAR(255) NOT NULL,
         imglink VARCHAR(255) NOT NULL,
-        category VARCHAR(255) NOT NULL
+        owner VARCHAR(255) NOT NULL
       );
     `);
 
@@ -31,7 +31,7 @@ async function resetDatabase() {
         description VARCHAR(255) NOT NULL,
         link VARCHAR(255) NOT NULL,
         imglink VARCHAR(255) NOT NULL,
-        category VARCHAR(255) NOT NULL
+        owner VARCHAR(255) NOT NULL
       );
     `);
 
@@ -43,7 +43,7 @@ async function resetDatabase() {
           description VARCHAR(255) NOT NULL,
           link VARCHAR(255) NOT NULL,
           imglink VARCHAR(255) NOT NULL,
-          category VARCHAR(255) NOT NULL
+          owner VARCHAR(255) NOT NULL
         );
       `);
 
@@ -55,7 +55,7 @@ async function resetDatabase() {
       description VARCHAR(255) NOT NULL,
       link VARCHAR(255) NOT NULL,
       imglink VARCHAR(255) NOT NULL,
-      category VARCHAR(255) NOT NULL
+      owner VARCHAR(255) NOT NULL
     );
   `);
 
@@ -73,7 +73,7 @@ async function resetDatabase() {
 
     // Seed the frontend table
     await pool.query(`
-      INSERT INTO frontend (title, description, link, imglink, category)
+      INSERT INTO frontend (title, description, link, imglink, owner)
       VALUES
         ('Learn Grid Fast', 'Learn CSS Grid - A 13 Minute Deep Dive', 'https://youtu.be/EiNiSFIPIQE?si=snHGlSNCbFH_ugdH', 'https://i.ytimg.com/vi/EiNiSFIPIQE/hqdefault.jpg', 'Martina'),
         ('Learn CSS Positioning Quickly', 'A Real World Example', 'https://youtu.be/MxEtxo_AaZ4?si=JjoJixNuSRi9WoCw', 'https://i.ytimg.com/vi/MxEtxo_AaZ4/hqdefault.jpg', 'Woody95'),
@@ -88,7 +88,7 @@ async function resetDatabase() {
 
     // Seed the backend table
     await pool.query(`
-        INSERT INTO backend (title, description, link, imglink, category)
+        INSERT INTO backend (title, description, link, imglink, owner)
         VALUES
         ('Learn Fetch API In 6 Minutes', 'You guys will love this one', 'https://youtu.be/cuEtnrL9-H0?si=Rp-W_qbDP419SaVb', 'https://i.ytimg.com/vi/cuEtnrL9-H0/maxresdefault.jpg', 'Peaches'),
         ('JavaScript Promises', 'Learn in just 10 minutes', 'https://youtu.be/DHvZLI7Db8E?si=2AHgcipfzCzHJrK9', 'https://i.ytimg.com/vi/DHvZLI7Db8E/maxresdefault.jpg', 'LordOfTheManor'),
@@ -104,7 +104,7 @@ async function resetDatabase() {
 
     // Seed the funstuff table
     await pool.query(`
-    INSERT INTO funstuff (title, description, link, imglink, category)
+    INSERT INTO funstuff (title, description, link, imglink, owner)
     VALUES
     ('MY FAVOURITE STUDY TUNES', 'Deep Focus Music To Improve Concentration - 12 Hours of Ambient Study Music to Concentrate #601', 'https://www.youtube.com/live/Djz6sfWGmgM?si=YDLvKqOksLBX_ZY5', 'https://e.snmc.io/i/300/s/fe53e7917decee9cf2b2faf195e72bc5/8431694', 'Jasim'),
     ('Welcome to CSSBattle', 'Cascading Style Sheets Battle: Where Pixels and Pizzazz Collide!', 'https://cssbattle.dev/', 'https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Fi.imgur.com%2Ff4MfHUyh.jpg', 'Jasim'),
@@ -114,7 +114,7 @@ async function resetDatabase() {
 
     // Seed the uxdesign table
     await pool.query(`
-      INSERT INTO uxdesign (title, description, link, imglink, category)
+      INSERT INTO uxdesign (title, description, link, imglink, owner)
       VALUES
       ('Figma Stuff You Might Like', 'Figma Tutorial: A Crash Course for Beginners', 'https://www.youtube.com/watch?v=IOVFRMuPeVQ&t=4125s', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0dLzvu2beNQvYBAicMjphIcZaW6ZcmuKdOA&usqp=CAU', 'BigJoJo'),
       ('All About Product', 'Marty Cagan - The Nature of Product', 'https://youtu.be/T3VRz18ntjQ?si=6wyd71FPhWh1vFMq', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZXosVqBmAOxUrSnvU-6x4DZniR5DPg2Py3g&usqp=CAU', 'Grimoire44'),
