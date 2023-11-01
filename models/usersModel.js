@@ -44,9 +44,33 @@ console.log(hash)
 export async function getUserById(id){
     // Query the database and return the user with a matching name and password
   //initiate variable to store our SQL query string
-  console.log('hello' + typeof Number(id))
-  const queryText = "SELECT * FROM users WHERE id = $1";
+  const queryText = "SELECT * FROM users WHERE id = $1 ";
   //await the pool query to send the query to the database
   const result = await pool.query(queryText, [id]);
+
+  return result.rows[0] || null;
+}
+
+//update rating for front end 
+export async function updateFrontRating(id, rating){
+  const queryText = "UPDATE users SET frontrating = $2 WHERE id = $1 RETURNING *";
+
+  const result = await pool.query(queryText, [id, rating]);
+  return result.rows[0] || null;
+}
+
+//update rating for back end 
+export async function updateBackRating(id, rating){
+  const queryText = "UPDATE users SET backRating = $2 WHERE id = $1 RETURNING *";
+
+  const result = await pool.query(queryText, [id, rating]);
+  return result.rows[0] || null;
+}
+
+//update rating for ui 
+export async function updateUiRating(id, rating){
+  const queryText = "UPDATE users SET uiRating = $2 WHERE id = $1 RETURNING *";
+
+  const result = await pool.query(queryText, [id, rating]);
   return result.rows[0] || null;
 }

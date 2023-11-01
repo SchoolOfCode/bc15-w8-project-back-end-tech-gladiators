@@ -1,4 +1,4 @@
-import { createUser, getUserByNameAndPassword, getUserById } from "../models/usersModel.js";
+import { createUser, getUserByNameAndPassword, getUserById, updateFrontRating, updateBackRating, updateUiRating} from "../models/usersModel.js";
 
 export async function getUserNamePassword(req, res) {
   try {
@@ -25,6 +25,7 @@ export async function getUserNamePassword(req, res) {
       });
   }
 }
+
 
 export async function getUser(req, res) {
   try {
@@ -68,6 +69,73 @@ export async function postUser(req, res) {
       .json({
         status: "error",
         message: "An error occurred while creating a user.",
+      });
+  }
+}
+
+
+//update user rating for front end confidence
+export async function updateUserFrontRating(req, res) {
+  try {
+    //store in a variable the req.body
+    const newRating = req.body.rating;
+    const id = req.body.id
+    //store in a variable the await promise
+    const newRatingData = await updateFrontRating(id, newRating);
+    //return status
+    res.status(201).json({ status: "success", data: newRatingData });
+  } catch (error) {
+    // Handle unexpected errors, e.g., database connection errors, server errors.
+    console.error(error);
+    res
+      .status(500)
+      .json({
+        status: "error",
+        message: "An error occurred while updating your rating.",
+      });
+  }
+}
+
+//update user rating for back end confidence
+export async function updateUserBackRating(req, res) {
+  try {
+    //store in a variable the req.body
+    const newRating = req.body.rating;
+    const id = req.body.id
+    //store in a variable the await promise
+    const newRatingData = await updateBackRating(id, newRating);
+    //return status
+    res.status(201).json({ status: "success", data: newRatingData });
+  } catch (error) {
+    // Handle unexpected errors, e.g., database connection errors, server errors.
+    console.error(error);
+    res
+      .status(500)
+      .json({
+        status: "error",
+        message: "An error occurred while updating your rating.",
+      });
+  }
+}
+
+//update user rating for UI UX confidence
+export async function updateUserUiRating(req, res) {
+  try {
+    //store in a variable the req.body
+    const newRating = req.body.rating;
+    const id = req.body.id
+    //store in a variable the await promise
+    const newRatingData = await updateUiRating(id, newRating);
+    //return status
+    res.status(201).json({ status: "success", data: newRatingData });
+  } catch (error) {
+    // Handle unexpected errors, e.g., database connection errors, server errors.
+    console.error(error);
+    res
+      .status(500)
+      .json({
+        status: "error",
+        message: "An error occurred while updating your rating.",
       });
   }
 }

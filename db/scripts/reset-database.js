@@ -67,7 +67,10 @@ async function resetDatabase() {
         email VARCHAR(255) NOT NULL,
         username VARCHAR(255) NOT NULL,
         password VARCHAR(255) NOT NULL,
-        imglink VARCHAR(255)
+        imglink VARCHAR(1000), 
+        frontRating INT,
+        backRating INT,
+        uiRating INT
       );
     `);
 
@@ -126,9 +129,9 @@ async function resetDatabase() {
 
     //Seed the users table
     await pool.query(`
-      INSERT INTO users (name, email, username, password, imglink)
+      INSERT INTO users (name, email, username, password, imglink, frontRating, backRating, uiRating)
       VALUES
-      ('Olivia Johnson', 'Olivia.123@gmail.com', 'Livi1996', '$2b$10$eSMkuyVtfdWuLTLonkPHIe0YdOK43quCXFce49DMWlz0oyA8fXZEO', 'https://res.cloudinary.com/ddckdaelz/image/upload/v1697441490/Illustration/lost_exbnp0.jpg')
+      ('Olivia Johnson', 'Olivia.123@gmail.com', 'Livi1996', '$2b$10$eSMkuyVtfdWuLTLonkPHIe0YdOK43quCXFce49DMWlz0oyA8fXZEO', 'https://res.cloudinary.com/ddckdaelz/image/upload/v1697441490/Illustration/lost_exbnp0.jpg', 1, '2', '3')
     `);
 
     console.log("Database reset successful");

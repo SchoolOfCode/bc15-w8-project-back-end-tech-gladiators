@@ -7,5 +7,7 @@ export const userRoute = express.Router();
 userRoute.post("/login", userController.getUserNamePassword);
 userRoute.post("/newuser", userController.postUser);
 userRoute.post("/user", userController.getUser);
-
+userRoute.patch("/front", userController.updateUserFrontRating);
+userRoute.patch("/back", userController.updateUserBackRating);
+userRoute.patch("/ui", userController.updateUserUiRating);
 
